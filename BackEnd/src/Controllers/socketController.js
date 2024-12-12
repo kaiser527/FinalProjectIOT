@@ -1,7 +1,7 @@
 import {
   getAllTemperatureAxios,
   putTemperatureAxios,
-} from "../services/apiService";
+} from "../services/apiServices";
 
 const updateDbSocket = (io) => {
   io.on("connection", (client) => {
