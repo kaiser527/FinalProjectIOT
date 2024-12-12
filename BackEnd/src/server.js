@@ -20,13 +20,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 connecttion();
 
 //config socket.io
-const io = require("socket.io")(server, {
-  cors: {
-    origin: process.env.REACT,
-  },
-});
+const io = require("socket.io")(server);
 
-//add temperature to database
+//update temperature in database
 updateDbSocket(io);
 
 //init web routes
