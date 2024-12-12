@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open sans", sans-serif;
+  color: #fff;
+}
+.main-container {
+  background-image: url("./assets/background.avif");
+  height: 100vh;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .loading {
+    text-align: center;
+    font-size: 30px;
+  }
+  .language {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    .language-icon {
+      font-size: 50px;
+      cursor: pointer;
+      &:hover {
+        transition: all 0.1s;
+        scale: 1.05;
+      }
+    }
+    .language-content {
+      border-radius: 10px;
+      width: 150px;
+      height: 0px;
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      transition: height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 7px;
+        gap: 4px;
+        font-size: 14px;
+        li {
+          display: none;
+          width: 30px;
+          cursor: pointer;
+          opacity: 0.63;
+          transition: all 0.3s;
+          border-radius: 10px;
+          &:hover {
+            opacity: 1;
+            width: 88%;
+            background-color: #1a1a1a2a;
+          }
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+      &.open {
+        height: 50px;
+        ul {
+          li {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .wrapper {
+    height: 70vh;
+    display: flex;
+    height: 500px;
+    justify-content: space-evenly;
+    font-size: 30px;
+    .data {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      .title {
+        display: flex;
+        font-size: 40px;
+        .icon {
+          font-size: 55px;
+        }
+      }
+    }
+  }
+}
