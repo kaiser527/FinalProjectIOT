@@ -3,8 +3,9 @@ import initWebRoutes from "./routes/api";
 import bodyParser from "body-parser";
 import connecttion from "./config/connectDB";
 import cors from "cors";
-import updateDbSocket from "./Controllers/socketController";
+import updateDbSocket from "./controllers/socketController";
 
+//import .env
 require("dotenv").config();
 
 const app = express();

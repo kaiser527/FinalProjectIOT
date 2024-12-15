@@ -3,7 +3,7 @@ import {
   getAllTemperature,
   getHomePage,
   putTemperature,
-} from "../Controllers/homeController";
+} from "../controllers/homeController";
 
 const router = express.Router();
 
