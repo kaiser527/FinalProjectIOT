@@ -20,6 +20,9 @@ const App = () => {
 
   const dispatch = useDispatch();
 
+  const date = new Date();
+  const showTime = date.getHours() + ":" + date.getMinutes();
+
   socket.on("server2user", (data) => {
     setTemp(data);
   });
@@ -35,6 +38,9 @@ const App = () => {
 
   return (
     <div className="main-container">
+      <div className="time">
+        <FormattedMessage id="Time" />: {showTime}
+      </div>
       <div className="language">
         <FaLanguage
           onClick={() => handleToggleDropdown()}

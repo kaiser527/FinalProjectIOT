@@ -2,5 +2,6 @@
   "sensor": {
     "humidty": "Humidty",
     "temp": "Temp"
-  }
+  },
+  "Time": "Time"
 }

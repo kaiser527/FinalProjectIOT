@@ -2,5 +2,6 @@
   "sensor": {
     "humidty": "Độ ẩm",
     "temp": "Nhiệt độ"
-  }
+  },
+  "Time": "Thời gian"
 }
